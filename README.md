@@ -1,42 +1,42 @@
 # DBLP Link Prediction
 
-Prédiction de futures collaborations entre chercheurs avec GNN + LSTM.
+Predicting future collaborations between researchers with GNN + LSTM.
 
 ## Quick Start
 
-**Un seul fichier à utiliser:**
+**Single file to use:**
 
 ```bash
 jupyter notebook DBLP_Link_Prediction_Complete.ipynb
 ```
 
-Exécutez les cellules dans l'ordre. Le notebook contient **TOUT**:
-- Extraction des données DBLP → `co_publications.csv`
-- Analyse complète répondant aux 7 questions
-- Modèle GCN + LSTM
-- Métriques et visualisations
+Run the cells in order. The notebook contains **EVERYTHING**:
+- DBLP data extraction → `co_publications.csv`
+- Complete analysis answering 7 questions
+- GCN + LSTM model
+- Metrics and visualizations
 
 ## 📋 Structure
 
-**PARTIE 1**: Extraction de données
-- Téléchargement DBLP XML
-- Parsing et génération CSV
-- ⚠️ Si vous avez déjà le CSV, sautez cette partie
+**PART 1**: Data extraction
+- DBLP XML download
+- Parsing and CSV generation
+- ⚠️ If you already have the CSV, skip this part
 
-**PARTIE 2**: Analyse
-1. Revue de littérature (statique vs dynamique)
-2. Défis des graphes dynamiques
-3. Architecture GCN/GAT + LSTM
+**PART 2**: Analysis
+1. Literature review (static vs dynamic)
+2. Dynamic graph challenges
+3. GCN/GAT + LSTM architecture
 4. Feature engineering
-5. Validation temporelle
-6. Métriques appropriées
-7. Visualisations
+5. Temporal validation
+6. Appropriate metrics
+7. Visualizations
 
-## Fichiers
+## Files
 
-- `DBLP_Link_Prediction_Complete.ipynb` - **Notebook principal** (tout-en-un)
-- `README.md` - Ce fichier
-- `research_answers.md` - Réponses détaillées en français
+- `DBLP_Link_Prediction_Complete.ipynb` - **Main notebook** (all-in-one)
+- `README.md` - This file
+- `research_answers.md` - Detailed answers in French
 
 ## Installation
 
@@ -44,14 +44,14 @@ Exécutez les cellules dans l'ordre. Le notebook contient **TOUT**:
 pip install torch torch-geometric networkx pandas numpy scikit-learn matplotlib seaborn tqdm lxml
 ```
 
-## Points Clés
+## Key Points
 
-- **Temporal modeling > Static**: LSTM améliore GCN statique
-- **Validation temporelle obligatoire**: Évite data leakage
-- **Métriques adaptées**: ROC-AUC, AP, Precision@K (pas accuracy!)
-- **Features riches**: Structure + temps + publications
+- **Temporal modeling > Static**: LSTM improves static GCN
+- **Temporal validation mandatory**: Avoids data leakage
+- **Appropriate metrics**: ROC-AUC, AP, Precision@K (not accuracy!)
+- **Rich features**: Structure + time + publications
 
-## Résultats Attendus
+## Expected Results
 
 - ROC-AUC: ~0.75-0.85
 - Average Precision: ~0.70-0.80
