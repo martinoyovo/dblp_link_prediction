@@ -2,6 +2,8 @@
 
 Predicting future collaborations between researchers with GNN + LSTM.
 
+<img src="https://github.com/martinoyovo/dblp_link_prediction/blob/main/metrics_curves.png" width="100%">
+
 ## Quick Start
 
 **Single file to use:**
@@ -52,6 +54,8 @@ pip install torch torch-geometric networkx pandas numpy scikit-learn matplotlib 
 - **Rich features**: Structure + time + publications
 
 ## Expected Results
+
+<img src="https://github.com/martinoyovo/dblp_link_prediction/blob/main/graph_evolution.png" width="100%">
 
 - ROC-AUC: ~0.75-0.85
 - Average Precision: ~0.70-0.80
